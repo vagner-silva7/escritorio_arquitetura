@@ -1,0 +1,151 @@
+/* Alteração do box model */
+*,*::after, *::before { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html { font-size: 14px;}
+
+body { 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color:rgb(129, 127, 127); 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Colocando imagem de fundo e fixando a imagem */
+    background-image: url(../imagem_fundo/fundo-madeira.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* tamanho minimo de cada pagina, 100vh, independente do conteudo pequeno da pagina, exemplo pagina contato */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Tag main (com display, flex-direction, min-height), ocupará todo o espaço necessario, para colocar o rodapé no final da pagina */
+main {flex: 1}
+
+/* limite de imagem flexivel ou responsivo */
+img { max-width: 100%;}
+
+/* Formatação do mapa com borda arredondado */
+iframe {
+    border-radius: 5%;
+}
+
+/* limite de 1100px, deixando de aumentar os itens */
+.limitador {
+    max-width: 1100px;
+}
+
+/* Menu e cabeçalho */
+
+header{
+    background-color:yellowgreen;
+    height: 8rem; 
+
+        /* cabeçalho fixo */
+        position: sticky;
+        top: 0;
+
+        /* Ajuste de profundidade (eixo Z) Quanto maior, mais a ferente fica */
+        z-index: 1000;
+}
+
+.logo_cabecalho{
+    margin-left: 0.5rem;  
+    width: 7rem; 
+    height: 7rem; 
+    max-width: 20rem; 
+    min-width: 7rem; 
+    float: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav h1 {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+nav h1 a { color: black;
+           font-size: 1rem;
+           display: inline-block; 
+           margin-left: 8rem;
+}
+
+/* navegação do site pelo teclado e pelo mouse, destacando ao passar, nos links */
+nav h1 a:hover,
+nav h1 a:focus,
+.links-menu a:hover,
+.links-menu a:focus {background-color: gray};
+
+/* Desativar menu */
+.links-menu { list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+/* Nos casos de alinhamentos, centralizado, utilizar o flex */
+.links-menu a { 
+    color: yellowgreen;
+    font-weight: bold;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black ;
+    border-radius: 50%;
+}
+
+/* Rodapé */
+footer{
+    background-color:yellowgreen;
+    height: 8rem; 
+}
+
+.logo_rodape{
+    margin-left: 0.5rem;
+    width: 7rem;
+    height: 7rem;
+    max-width: 20rem;
+    min-width: 7rem;
+    float: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h5 {   
+    font-size: 1rem;
+    margin-left: 10rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Corpo da pagina */
+
+.container{
+    margin-top: 1rem;
+}
+
+h2, h3, h4{
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.localizacao{
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 20rem;
+}
