@@ -16,14 +16,13 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     /* Colocando imagem de fundo e fixando a imagem */
-    background-image: url(../imagem_fundo/fundo-madeira.jpg);
+    background-image: url(../imagens_fundo/fundo-madeira.jpg);
     background-size: cover;
     background-attachment: fixed;
-    
+        
     /* tamanho minimo de cada pagina, 100vh, independente do conteudo pequeno da pagina, exemplo pagina contato */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Tag main (com display, flex-direction, min-height), ocupará todo o espaço necessario, para colocar o rodapé no final da pagina */
@@ -45,10 +44,11 @@ iframe {
 /* Menu e cabeçalho */
 
 header{
-    background-color:yellowgreen;
-    height: 8rem; 
+    background: linear-gradient(to right, yellowgreen, transparent);
+    /* background-color:yellowgreen; */
+    height: 12rem; 
 
-        /* cabeçalho fixo */
+         /* cabeçalho fixo */
         position: sticky;
         top: 0;
 
@@ -58,12 +58,12 @@ header{
 
 .logo_cabecalho{
     margin-left: 0.5rem;  
-    width: 7rem; 
-    height: 7rem; 
+    width: 8rem;
+    height: 8rem;
     max-width: 20rem; 
     min-width: 7rem; 
     float: left;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -75,10 +75,11 @@ nav h1 {
     text-align: right;
 }
 
-nav h1 a { color: black;
-           font-size: 1rem;
-           display: inline-block; 
-           margin-left: 8rem;
+nav h1 a { 
+    color: black;
+    font-size: 1rem;
+    display: inline-block; 
+    margin-left: 10rem;
 }
 
 /* navegação do site pelo teclado e pelo mouse, destacando ao passar, nos links */
@@ -108,44 +109,82 @@ nav h1 a:focus,
 
 /* Rodapé */
 footer{
-    background-color:yellowgreen;
-    height: 8rem; 
+    background: linear-gradient(to right, yellowgreen, transparent);
+    /* background-color:yellowgreen; */
+    height: 12rem; 
 }
 
 .logo_rodape{
     margin-left: 0.5rem;
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
     max-width: 20rem;
     min-width: 7rem;
     float: left;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
 
-h5 {   
+h5 p{   
     font-size: 1rem;
     margin-left: 10rem;
     margin-right: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.5rem;
 }
+
+
 
 /* Corpo da pagina */
 
-.container{
-    margin-top: 1rem;
+.transparencia {
+    background-color: white;
+    opacity: 0.7;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
 }
 
-h2, h3, h4{
+.destaque-primario h2{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 2rem;
+    color: black; 
+}
+
+.destaque-primario img{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    width: 10rem;
+    height: 10rem;
+    border: 5px solid black;
+}
+
+h3, h4{
     font-size: 1rem;
     margin-left: 1rem;
     margin-right: 0.5rem;
+    font-size: 5rem;
+    color: red;
 }
 
 .localizacao{
     text-align: center;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    margin-top: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+#slider {
+        margin-top: 30rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        width: 80%;
 }
