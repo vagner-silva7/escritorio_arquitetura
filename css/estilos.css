@@ -31,11 +31,6 @@ main {flex: 1}
 /* limite de imagem flexivel ou responsivo */
 img { max-width: 100%;}
 
-/* Formatação do mapa com borda arredondado */
-iframe {
-    border-radius: 5%;
-}
-
 /* limite de 1100px, deixando de aumentar os itens */
 .limitador {
     max-width: 1100px;
@@ -173,12 +168,18 @@ h3, h4{
     color: red;
 }
 
+/* Mapa do google */
 .localizacao{
     text-align: center;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Formatação do mapa do google com borda arredondado */
+iframe {
+    border-radius: 5px;
 }
 
 
