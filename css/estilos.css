@@ -39,9 +39,10 @@ img { max-width: 100%;}
 /* Menu e cabeçalho */
 
 header{
-    background: linear-gradient(to right, yellowgreen, transparent);
+
+    background: linear-gradient(to right, yellowgreen, transparent); 
     /* background-color:yellowgreen; */
-    height: 12rem; 
+    height: 11rem; 
 
          /* cabeçalho fixo */
         position: sticky;
@@ -106,7 +107,7 @@ nav h1 a:focus,
 footer{
     background: linear-gradient(to right, yellowgreen, transparent);
     /* background-color:yellowgreen; */
-    height: 12rem; 
+    height: 11rem; 
 }
 
 .logo_rodape{
@@ -140,9 +141,11 @@ h5 p{
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 5px;
+    height: 400px;
+
 }
 
-.destaque-primario h2{
+.transparencia .destaque-primario h2{
     font-size: 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -150,7 +153,7 @@ h5 p{
     color: black; 
 }
 
-.destaque-primario img{
+.transparencia .destaque-primario img{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-top: 2rem;
@@ -182,10 +185,44 @@ iframe {
     border-radius: 5px;
 }
 
+/* formatar slide */
 
-#slider {
-        margin-top: 30rem;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        width: 80%;
+.transparencia .box{
+    top: 5rem; /* 400px */
+    width: 15rem; /* 200px */
+    height: 200px; /* 200px */
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
 }
+
+@keyframes animate{
+        0% {
+            transform: perspective(
+                1600px)
+            rotateY(0deg);    
+        }
+        100% {
+            transform: perspective(
+                1600px)
+            rotateY(360deg)
+        }
+}
+
+.transparencia .box span{
+    position: absolute;
+    top: 10rem;
+    left: 0.5rem;
+    width: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
+}
+
+.transparencia .box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
+} 
