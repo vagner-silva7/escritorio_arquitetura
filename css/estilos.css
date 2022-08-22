@@ -12,12 +12,10 @@ body {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    background-color:rgb(129, 127, 127); 
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     /* Colocando imagem de fundo e fixando a imagem */
-    background-image: url(../imagens_fundo/fundo-madeira.jpg);
-    background-size: cover;
+    background-image: url(../imagens_fundo/fundo_tela.jpg);   
     background-attachment: fixed;
         
     /* tamanho minimo de cada pagina, 100vh, independente do conteudo pequeno da pagina, exemplo pagina contato */
@@ -135,59 +133,47 @@ h5 p{
 
 .transparencia {
     background-color: white;
-    opacity: 0.7;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    height: 400px;
+    opacity: 0.9;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 10rem;
+    border-radius: 2rem;   
+    height: 15rem; 
+    border: 0.2rem solid black;
 
 }
 
 .transparencia .destaque-primario h2{
     font-size: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 2rem;
     color: black; 
 }
 
-.transparencia .destaque-primario img{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    width: 10rem;
-    height: 10rem;
-    border: 5px solid black;
+.transparencia2 {
+    background-color: white;
+    opacity: 0.9;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 10rem;
+    border-radius: 2rem;   
+    height: 5rem; 
+    border: 0.2rem solid black;
 }
 
-h3, h4{
+.transparencia2 .destaque-secundario h2{
     font-size: 1rem;
-    margin-left: 1rem;
-    margin-right: 0.5rem;
-    font-size: 5rem;
-    color: red;
-}
-
-/* Mapa do google */
-.localizacao{
-    text-align: center;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* Formatação do mapa do google com borda arredondado */
-iframe {
-    border-radius: 5px;
+    color: black; 
+    text-align: center;
 }
 
 /* formatar slide */
 
-.transparencia .box{
+.transparencia3 .box{
     top: 5rem; /* 400px */
     width: 15rem; /* 200px */
     height: 200px; /* 200px */
