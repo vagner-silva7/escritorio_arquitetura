@@ -29,7 +29,7 @@ img { max-width: 100%;}
 
     background: linear-gradient(to right, yellowgreen, transparent); 
     /* background-color:yellowgreen; */
-    height: 11rem; 
+    height: 12rem; 
     width: 100%;
 
         /* cabeçalho fixo */
@@ -96,7 +96,7 @@ nav h1 a:focus,
 /* Rodapé */
 footer{
     background: linear-gradient(to right, yellowgreen, transparent);
-    height: 11rem; 
+    height: 12rem; 
     z-index: 1;
 }
 
@@ -112,7 +112,7 @@ footer{
 }
 
 h5 p{   
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-left: 10rem;
     margin-right: 0.5rem;
     margin-top: 1.3rem;
@@ -146,6 +146,7 @@ h5 p{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100%;
     z-index: 1;
+    margin-top: 10rem;
 } 
 
 .container .transparencia {
@@ -379,161 +380,125 @@ h5 p{
 /* configuração media query */
 /* ------------------------ */
 
-@media screen and (min-width: 640px) {
-    html { font-size: 10px;}
 
-    /* configuração da imagem de fundo */
-    .container:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 90rem;
-        z-index: 1;
-        opacity: 0.1;
-        background-image: url(/imagens/fundo.jpg);
-        background-repeat: no-repeat;
-        background-position: 5% 0;
-        background-size: cover;
-    }
-
-    .container { 
-        position: relative;
-        overflow: hidden;
-        font-style: italic;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        height: 100%;
-        z-index: 1;
-    } 
-
-    /* formatar slide 3*/
-
-    .container .slide .transparencia3 { 
-        position: relative;
-        background-color: white;
-        opacity: 1;
-        overflow: hidden;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        border-radius: 2rem;
-        height: 30rem;
-        border: 2px solid black;
-        z-index: 1;
-    }
-
-    .container .slide .transparencia3 .box{
-        top: 25rem; 
-        width: 12rem; 
-        height: 12rem; 
-        margin: auto;
-        transform-style: preserve-3d;
-        animation: animate 20s linear infinite;
-        z-index: 1;
-    }
-
-    @keyframes animate{
-            0% {
-                transform: perspective(
-                    100rem)
-                rotateY(0deg);    
-            }
-            100% {
-                transform: perspective(
-                    100rem)
-                rotateY(360deg)
-            }
-    }
-
-    .container .slide .transparencia3 .box span{
-        position: absolute;
-        top: 5rem;
-        left: 0;
-        width: 100%;
-        transform-origin: center;
-        transform-style: preserve-3d;
-        transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
-        z-index: 1;
-    }
-
-    .container .slide .transparencia3 .box span img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        width: 100%;
-        -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
-        z-index: 1;
-    } 
-
-    /* formatar slide 5*/
-
-    .container .slide .transparencia5 { 
-        position: relative;
-        background-color: white;
-        opacity: 1;
-        overflow: hidden;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        border-radius: 2rem;
-        height: 30rem;
-        border: 2px solid black;
-        z-index: 1;
-    }
-
-    .container .slide .transparencia5 .box{
-        top: 25rem; 
-        width: 12rem; 
-        height: 12rem; 
-        margin: auto;
-        transform-style: preserve-3d;
-        animation: animate 20s linear infinite;
-        z-index: 1;
-    }
-
-    @keyframes animate{
-            0% {
-                transform: perspective(
-                    100rem)
-                rotateY(0deg);    
-            }
-            100% {
-                transform: perspective(
-                    100rem)
-                rotateY(360deg)
-            }
-    }
-
-    .container .slide .transparencia5 .box span{
-        position: absolute;
-        top: 5rem;
-        left: 0;
-        width: 100%;
-        transform-origin: center;
-        transform-style: preserve-3d;
-        transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
-        z-index: 1;
-    }
-
-    .container .slide .transparencia5 .box span img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        width: 100%;
-        -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
-        z-index: 1;
-    } 
-}
-
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 800px) {
     html { font-size: 12px;}
 
+    body { 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Tag main (com display, flex-direction, min-height), ocupará todo o espaço necessario, para colocar o rodapé no final da pagina */
+    main {flex: 1;}
+    
+    /* limite de imagem flexivel ou responsivo */
+    img { max-width: 100%;}
+    
+    /* Menu e cabeçalho */
+    
+    .cabecalho{
+    
+        background: linear-gradient(to right, yellowgreen, transparent); 
+        /* background-color:yellowgreen; */
+        height: 12rem; 
+        width: 100%;
+    
+            /* cabeçalho fixo */
+            position: fixed;
+            top: 0;
+    
+            /* Ajuste de profundidade (eixo Z) Quanto maior, mais a ferente fica */
+            z-index: 2;
+    }
+    
+    .logo_cabecalho{
+        margin-left: 0.5rem;  
+        width: 8rem;
+        height: 8rem;
+        max-width: 20rem; 
+        min-width: 7rem; 
+        float: left;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    nav h1 {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        text-align: right;
+    }
+    
+    nav h1 a { 
+        color: black;
+        font-size: 1rem;
+        display: inline-block; 
+        margin-left: 14rem;
+    }
+    
+    /* navegação do site pelo teclado e pelo mouse, destacando ao passar, nos links */
+    nav h1 a:hover,
+    nav h1 a:focus,
+    .links-menu a:hover,
+    .links-menu a:focus {background-color: gray};
+    
+    /* Desativar menu */
+    .links-menu { list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+    
+    /* Nos casos de alinhamentos, centralizado, utilizar o flex */
+    .links-menu a { 
+        color: yellowgreen;
+        font-weight: bold;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black ;
+        border-radius: 50%;
+        margin-top: 0.5rem;
+        margin-left: 10rem;
+    }
+    
+    /* Rodapé */
+    footer{
+        background: linear-gradient(to right, yellowgreen, transparent);
+        height: 12rem; 
+        z-index: 1;
+    }
+    
+    .logo_rodape{
+        margin-left: 0.5rem;
+        width: 8rem;
+        height: 8rem;
+        max-width: 20rem;
+        min-width: 7rem;
+        float: left;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    h5 p{   
+        font-size: 1.2rem;
+        margin-left: 10rem;
+        margin-right: 0.5rem;
+        margin-top: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    
+    /* Corpo da pagina e imagem de fundo*/
+    
     /* configuração da imagem de fundo */
     .container:before {
         content: ' ';
@@ -542,15 +507,15 @@ h5 p{
         left: 0;
         top: 0;
         width: 100%;
-        height: 90rem;
-        z-index: 1;
+        height: 90rem; 
+        z-index: 1; 
         opacity: 0.1;
-        background-image: url(/imagens/fundo.jpg);
+        background-image: url(../imagens_fundo/fundo_tela.jpg);
         background-repeat: no-repeat;
         background-position: 5% 0;
         background-size: cover;
     }
-
+    
     .container { 
         position: relative;
         overflow: hidden;
@@ -559,9 +524,84 @@ h5 p{
         height: 100%;
         z-index: 1;
     } 
-
+    
+    .container .transparencia {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        border-radius: 2rem;   
+        height: 15rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    
+    }
+    
+    .container .transparencia .destaque-primario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+    }
+    
+    .container .transparencia2 {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        border-radius: 2rem;   
+        height: 5rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    }
+    
+    .container .transparencia2 .destaque-secundario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+        text-align: center;
+    }
+    
+    .container .transparencia4 {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        border-radius: 2rem;   
+        height: 5rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    }
+    
+    .container .transparencia4 .destaque-secundario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+        text-align: center;
+    }
+    
     /* formatar slide 3*/
-
+    
     .container .slide .transparencia3 { 
         position: relative;
         background-color: white;
@@ -576,7 +616,7 @@ h5 p{
         border: 2px solid black;
         z-index: 1;
     }
-
+    
     .container .slide .transparencia3 .box{
         top: 25rem; 
         width: 12rem; 
@@ -586,7 +626,7 @@ h5 p{
         animation: animate 20s linear infinite;
         z-index: 1;
     }
-
+    
     @keyframes animate{
             0% {
                 transform: perspective(
@@ -599,18 +639,18 @@ h5 p{
                 rotateY(360deg)
             }
     }
-
+    
     .container .slide .transparencia3 .box span{
         position: absolute;
         top: 5rem;
-        left: 0;
+        left: 0rem;
         width: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
         transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
         z-index: 1;
     }
-
+    
     .container .slide .transparencia3 .box span img{
         position: absolute;
         top: 0;
@@ -620,9 +660,9 @@ h5 p{
         -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
         z-index: 1;
     } 
-
+    
     /* formatar slide 5*/
-
+    
     .container .slide .transparencia5 { 
         position: relative;
         background-color: white;
@@ -637,7 +677,7 @@ h5 p{
         border: 2px solid black;
         z-index: 1;
     }
-
+    
     .container .slide .transparencia5 .box{
         top: 25rem; 
         width: 12rem; 
@@ -647,31 +687,31 @@ h5 p{
         animation: animate 20s linear infinite;
         z-index: 1;
     }
-
+    
     @keyframes animate{
-            0% {
-                transform: perspective(
-                    100rem)
-                rotateY(0deg);    
-            }
-            100% {
-                transform: perspective(
-                    100rem)
-                rotateY(360deg)
-            }
+        0% {
+            transform: perspective(
+                100rem)
+            rotateY(0deg);    
+        }
+        100% {
+            transform: perspective(
+                100rem)
+            rotateY(360deg)
+        }
     }
-
+    
     .container .slide .transparencia5 .box span{
         position: absolute;
         top: 5rem;
-        left: 0;
+        left: 0rem;
         width: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
         transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
         z-index: 1;
     }
-
+    
     .container .slide .transparencia5 .box span img{
         position: absolute;
         top: 0;
@@ -681,11 +721,160 @@ h5 p{
         -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
         z-index: 1;
     } 
+    
+    /* ----------------------- */
+    /* configuração formulario */
+    /* ----------------------- */
+    
+    .container .transparencia6 {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 2rem;   
+        height: 24.5rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    
+    }
+    
+    .container .transparencia6 .formulario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+    }
 }
 
-@media screen and (min-width: 1920px) {
+/* ------ */
+/* 1500px */
+/* ------ */
+
+@media screen and (min-width: 1500px) {
     html { font-size: 14px;}
 
+    body { 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Tag main (com display, flex-direction, min-height), ocupará todo o espaço necessario, para colocar o rodapé no final da pagina */
+    main {flex: 1;}
+    
+    /* limite de imagem flexivel ou responsivo */
+    img { max-width: 100%;}
+    
+    /* Menu e cabeçalho */
+    
+    .cabecalho{
+    
+        background: linear-gradient(to right, yellowgreen, transparent); 
+        /* background-color:yellowgreen; */
+        height: 12rem; 
+        width: 100%;
+    
+            /* cabeçalho fixo */
+            position: fixed;
+            top: 0;
+    
+            /* Ajuste de profundidade (eixo Z) Quanto maior, mais a ferente fica */
+            z-index: 2;
+    }
+    
+    .logo_cabecalho{
+        margin-left: 0.5rem;  
+        width: 8rem;
+        height: 8rem;
+        max-width: 20rem; 
+        min-width: 7rem; 
+        float: left;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    nav h1 {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        text-align: right;
+    }
+    
+    nav h1 a { 
+        color: black;
+        font-size: 1rem;
+        display: inline-block; 
+        margin-left: 14rem;
+    }
+    
+    /* navegação do site pelo teclado e pelo mouse, destacando ao passar, nos links */
+    nav h1 a:hover,
+    nav h1 a:focus,
+    .links-menu a:hover,
+    .links-menu a:focus {background-color: gray};
+    
+    /* Desativar menu */
+    .links-menu { list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+    
+    /* Nos casos de alinhamentos, centralizado, utilizar o flex */
+    .links-menu a { 
+        color: yellowgreen;
+        font-weight: bold;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black ;
+        border-radius: 50%;
+        margin-top: 0.5rem;
+        margin-left: 10rem;
+    }
+    
+    /* Rodapé */
+    footer{
+        background: linear-gradient(to right, yellowgreen, transparent);
+        height: 12rem; 
+        z-index: 1;
+    }
+    
+    .logo_rodape{
+        margin-left: 0.5rem;
+        width: 8rem;
+        height: 8rem;
+        max-width: 20rem;
+        min-width: 7rem;
+        float: left;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    h5 p{   
+        font-size: 1.2rem;
+        margin-left: 10rem;
+        margin-right: 0.5rem;
+        margin-top: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    
+    /* Corpo da pagina e imagem de fundo*/
+    
     /* configuração da imagem de fundo */
     .container:before {
         content: ' ';
@@ -694,15 +883,15 @@ h5 p{
         left: 0;
         top: 0;
         width: 100%;
-        height: 95rem;
-        z-index: 1;
+        height: 90rem; 
+        z-index: 1; 
         opacity: 0.1;
-        background-image: url(/imagens/fundo.jpg);
+        background-image: url(../imagens_fundo/fundo_tela.jpg);
         background-repeat: no-repeat;
         background-position: 5% 0;
         background-size: cover;
     }
-
+    
     .container { 
         position: relative;
         overflow: hidden;
@@ -711,9 +900,84 @@ h5 p{
         height: 100%;
         z-index: 1;
     } 
-
+    
+    .container .transparencia {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        border-radius: 2rem;   
+        height: 15rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    
+    }
+    
+    .container .transparencia .destaque-primario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+    }
+    
+    .container .transparencia2 {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        border-radius: 2rem;   
+        height: 5rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    }
+    
+    .container .transparencia2 .destaque-secundario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+        text-align: center;
+    }
+    
+    .container .transparencia4 {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        border-radius: 2rem;   
+        height: 5rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    }
+    
+    .container .transparencia4 .destaque-secundario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+        text-align: center;
+    }
+    
     /* formatar slide 3*/
-
+    
     .container .slide .transparencia3 { 
         position: relative;
         background-color: white;
@@ -728,7 +992,7 @@ h5 p{
         border: 2px solid black;
         z-index: 1;
     }
-
+    
     .container .slide .transparencia3 .box{
         top: 25rem; 
         width: 12rem; 
@@ -738,7 +1002,7 @@ h5 p{
         animation: animate 20s linear infinite;
         z-index: 1;
     }
-
+    
     @keyframes animate{
             0% {
                 transform: perspective(
@@ -751,18 +1015,18 @@ h5 p{
                 rotateY(360deg)
             }
     }
-
+    
     .container .slide .transparencia3 .box span{
         position: absolute;
         top: 5rem;
-        left: 0;
+        left: 0rem;
         width: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
         transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
         z-index: 1;
     }
-
+    
     .container .slide .transparencia3 .box span img{
         position: absolute;
         top: 0;
@@ -772,9 +1036,9 @@ h5 p{
         -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
         z-index: 1;
     } 
-
+    
     /* formatar slide 5*/
-
+    
     .container .slide .transparencia5 { 
         position: relative;
         background-color: white;
@@ -789,7 +1053,7 @@ h5 p{
         border: 2px solid black;
         z-index: 1;
     }
-
+    
     .container .slide .transparencia5 .box{
         top: 25rem; 
         width: 12rem; 
@@ -799,31 +1063,31 @@ h5 p{
         animation: animate 20s linear infinite;
         z-index: 1;
     }
-
+    
     @keyframes animate{
-            0% {
-                transform: perspective(
-                    100rem)
-                rotateY(0deg);    
-            }
-            100% {
-                transform: perspective(
-                    100rem)
-                rotateY(360deg)
-            }
+        0% {
+            transform: perspective(
+                100rem)
+            rotateY(0deg);    
+        }
+        100% {
+            transform: perspective(
+                100rem)
+            rotateY(360deg)
+        }
     }
-
+    
     .container .slide .transparencia5 .box span{
         position: absolute;
         top: 5rem;
-        left: 0;
+        left: 0rem;
         width: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
         transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
         z-index: 1;
     }
-
+    
     .container .slide .transparencia5 .box span img{
         position: absolute;
         top: 0;
@@ -833,4 +1097,34 @@ h5 p{
         -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
         z-index: 1;
     } 
+    
+    /* ----------------------- */
+    /* configuração formulario */
+    /* ----------------------- */
+    
+    .container .transparencia6 {
+        position: relative;
+        background-color: white;
+        opacity: 1;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 2rem;   
+        height: 24.5rem; 
+        border: 0.2rem solid black;
+        z-index: 1;
+    
+    }
+    
+    .container .transparencia6 .formulario h2{
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        color: black; 
+        z-index: 1;
+    }
 }
