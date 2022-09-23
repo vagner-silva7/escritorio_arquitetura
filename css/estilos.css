@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html { font-size: 10px;}
+html { font-size: 8px;}
 
 body { 
     margin-left: auto;
@@ -51,10 +51,15 @@ img { max-width: 100%;}
     margin-bottom: 0.5rem;
 }
 
+.cabecalho .contato{
+    font-size: 1.5rem;
+    margin-left: 58rem;
+}
+
 nav {
-    font-size: 1.2rem;
-    margin-top: 1.6rem;
-    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 2rem; 
+    margin-left: 10rem;
 }
 
 /* navegação do site pelo teclado e pelo mouse, destacando ao passar, nos links */
@@ -74,14 +79,12 @@ nav h1 a:focus,
 .links-menu a { 
     color: yellowgreen;
     font-weight: bold;
-    height: 2rem;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black ;
     border-radius: 50%;
-    margin-top: 0.5rem;
-    margin-left: 10rem;
 }
 
 /* Rodapé */
@@ -103,11 +106,9 @@ footer{
 }
 
 h5 p{   
-    font-size: 1.2rem;
-    margin-left: 10rem;
-    margin-right: 0.5rem;
-    margin-top: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 6rem;
+    text-align: center;
 }
 
 
@@ -157,7 +158,7 @@ h5 p{
 .container .transparencia .destaque-primario h2{
     position: relative;
     opacity: 1;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 2rem;
@@ -181,9 +182,8 @@ h5 p{
 .container .transparencia2 .destaque-secundario h2{
     position: relative;
     opacity: 1;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
     margin-top: 2rem;
     color: black; 
     z-index: 1;
@@ -206,9 +206,8 @@ h5 p{
 .container .transparencia4 .destaque-secundario h2{
     position: relative;
     opacity: 1;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    font-size: 1.5rem;
+    text-align: center  ;
     margin-top: 2rem;
     color: black; 
     z-index: 1;
@@ -372,18 +371,26 @@ h5 p{
 /* ------------------------ */
 
 /* ------ */
-/* 800px */
+/* 640px */
 /* ------ */
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 640px) {
+    html { font-size: 10px;}
+}
+
+/* ------ */
+/* 1280px */
+/* ------ */
+
+@media screen and (min-width: 1280px) {
     html { font-size: 12px;}
 }
 
 /* ------ */
-/* 1500px */
+/* 1920px */
 /* ------ */
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
     html { font-size: 14px;}
 }
