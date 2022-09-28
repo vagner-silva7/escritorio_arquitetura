@@ -27,7 +27,7 @@ img { max-width: 100%;}
 
 .cabecalho{
 
-    background: linear-gradient(to right, yellowgreen, transparent); 
+    background: linear-gradient(to right, yellowgreen, white); 
     /* background-color:yellowgreen; */
     height: 12.5rem; 
     width: 100%;
@@ -52,57 +52,20 @@ img { max-width: 100%;}
 }
 
 .cabecalho .contato{
-    font-size: 1.5rem;
-    margin-left: 58rem;
+    font-size: 2.0rem;
+    margin-top: 2.5rem;
+    text-align: center;
 }
 
-nav {
-    font-size: 1.5rem;
-    margin-top: 2rem; 
-    margin-left: 10rem;
-}
-
-/* navegação do site pelo teclado e pelo mouse, destacando ao passar, nos links */
-nav h1 a:hover,
-nav h1 a:focus,
-.links-menu a:hover,
-.links-menu a:focus {background-color: gray};
-
-/* Desativar menu */
-.links-menu { list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-/* Nos casos de alinhamentos, centralizado, utilizar o flex */
-.links-menu a { 
-    color: yellowgreen;
-    font-weight: bold;
-    height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black ;
-    border-radius: 50%;
+.cabecalho .contato a {
+    text-decoration: none;
 }
 
 /* Rodapé */
 footer{
-    background: linear-gradient(to right, yellowgreen, transparent);
+    background: linear-gradient(to right, yellowgreen, white);
     height: 12.5rem; 
     z-index: 1;
-}
-
-.logo_rodape{
-    margin-left: 0.5rem;
-    width: 8rem;
-    height: 8rem;
-    max-width: 20rem;
-    min-width: 7rem;
-    float: left;
-    margin-top: 2.5rem;
-    margin-bottom: 0.5rem;
 }
 
 h5 p{   
@@ -111,6 +74,9 @@ h5 p{
     text-align: center;
 }
 
+h5 a {
+    text-decoration: none;
+}
 
 /* Corpo da pagina e imagem de fundo*/
 
@@ -122,9 +88,9 @@ h5 p{
     left: 0;
     top: 0;
     width: 100%;
-    height: 90rem; 
+    height: 130rem; 
     z-index: 1; 
-    opacity: 0.1;
+    opacity: 0.3;
     background-image: url(../imagens_fundo/fundo_tela.jpg);
     background-repeat: no-repeat;
     background-position: 5% 0;
@@ -138,7 +104,7 @@ h5 p{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100%;
     z-index: 1;
-    margin-top: 10rem;
+    margin-top: 12rem;
 } 
 
 .container .transparencia {
@@ -190,6 +156,10 @@ h5 p{
     text-align: center;
 }
 
+.transparencia2 .destaque-secundario a {
+    text-decoration: none;
+}
+
 .container .transparencia4 {
     position: relative;
     background-color: white;
@@ -212,6 +182,10 @@ h5 p{
     color: black; 
     z-index: 1;
     text-align: center;
+}
+
+.transparencia4 .destaque-secundario a {
+    text-decoration: none;
 }
 
 /* formatar slide 3*/
@@ -336,10 +310,6 @@ h5 p{
     z-index: 1;
 } 
 
-/* ----------------------- */
-/* configuração formulario */
-/* ----------------------- */
-
 .container .transparencia6 {
     position: relative;
     background-color: white;
@@ -347,24 +317,112 @@ h5 p{
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 5rem;
-    margin-bottom: 5rem;
     border-radius: 2rem;   
-    height: 24.5rem; 
+    height: 30rem; 
     border: 0.2rem solid black;
     z-index: 1;
 
 }
 
-.container .transparencia6 .formulario h2{
+.container .transparencia6 .destaque-primario h2{
     position: relative;
     opacity: 1;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 2rem;
     color: black; 
     z-index: 1;
 }
+
+.container .transparencia7 {
+    position: relative;
+    background-color: white;
+    opacity: 1;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+    border-radius: 2rem;   
+    height: 10rem; 
+    border: 0.2rem solid black;
+    z-index: 1;
+}
+
+.container .transparencia7 .destaque-secundario h2{
+    position: relative;
+    opacity: 1;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: black; 
+    z-index: 1;
+    text-align: center;
+}
+
+.transparencia7 .destaque-secundario a {
+    text-decoration: none;
+}
+
+/* formatar slide 8 - por obra*/
+
+.container .slide .transparencia8 { 
+    position: relative;
+    background-color: white;
+    opacity: 1;
+    overflow: hidden;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+    height: 30rem;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.container .slide .transparencia8 .box{
+    top: 25rem; 
+    width: 12rem; 
+    height: 12rem; 
+    margin: auto;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes animate{
+        0% {
+            transform: perspective(
+                100rem)
+            rotateY(0deg);    
+        }
+        100% {
+            transform: perspective(
+                100rem)
+            rotateY(360deg)
+        }
+}
+
+.container .slide .transparencia8 .box span{
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+    width: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
+    z-index: 1;
+}
+
+.container .slide .transparencia8 .box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
+    z-index: 1;
+} 
 
 /* ------------------------ */
 /* configuração media query */
