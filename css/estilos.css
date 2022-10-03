@@ -310,6 +310,11 @@ h5 a {
     z-index: 1;
 } 
 
+
+/* --------- */
+/* lightbox  */
+/* --------- */
+
 .container .transparencia6 {
     position: relative;
     background-color: white;
@@ -365,64 +370,41 @@ h5 a {
 
 /* formatar slide 8 - por obra*/
 
-.container .slide .transparencia8 { 
+.container .transparencia8 { 
     position: relative;
     background-color: white;
     opacity: 1;
-    overflow: hidden;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
     border-radius: 2rem;
-    height: 30rem;
+    height: 50rem;
     border: 2px solid black;
     z-index: 1;
 }
 
-.container .slide .transparencia8 .box{
+.container .transparencia8 .galeria-de-fotos{
+    opacity: 1;
+    overflow: hidden;
     top: 25rem; 
     width: 12rem; 
     height: 12rem; 
     margin: auto;
-    transform-style: preserve-3d;
-    animation: animate 20s linear infinite;
     z-index: 1;
+
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+        
+    /* Mudando fundo de preto para rosa */
+    /* .lightboxOverlay{background-color: pink}; */
+
 }
 
-@keyframes animate{
-        0% {
-            transform: perspective(
-                100rem)
-            rotateY(0deg);    
-        }
-        100% {
-            transform: perspective(
-                100rem)
-            rotateY(360deg)
-        }
-}
 
-.container .slide .transparencia8 .box span{
-    position: absolute;
-    top: 5rem;
-    left: 0rem;
-    width: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform:rotateY(calc(var(--i) * 45deg))translateZ(300px);
-    z-index: 1;
-}
-
-.container .slide .transparencia8 .box span img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    width: 100%;
-    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004); 
-    z-index: 1;
-} 
 
 /* ------------------------ */
 /* configuração media query */
